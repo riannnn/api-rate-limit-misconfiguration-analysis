@@ -53,7 +53,21 @@ No backend enforcement
 
 All requests are processed without a transaction
 
-No HTTP 429 (Too Many Requests) error appears
+No HTTP 429 (Too Many Requests) error appears.
+
+▶ How to Run the Script (If Included)
+
+Install dependency:
+
+pip install requests
+
+Run:
+
+python test_rate_limit.py
+
+📌 Conclusion
+
+The rate limit is only displayed as information, but is not effectively enforced in the backend. This opens up the possibility of API abuse if exploited by irresponsible parties.
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue) ![Security](https://img.shields.io/badge/Security-Research-red) ![OWASP](https://img.shields.io/badge/OWASP-Aware-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
