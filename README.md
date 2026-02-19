@@ -5,55 +5,55 @@ This project aims to analyze the rate limiting implementation of an API endpoint
 
 Tests are performed both manually and automatically to ensure that the system actually executes requests on the backend.
 
-📌 Ikhtisar
+📌Overview
 
-Proyek ini bertujuan untuk menganalisis pembatasan laju implementasi pada sebuah API titik akhir dan mengidentifikasi potensi kesalahan konfigurasi yang dapat menyebabkan penyalahgunaan API.
+This project aims to analyze the rate of implementation on an API endpoint and identify potential misconfigurations that could impact the API.
 
-Pengujian dilakukan secara manual dan otomatis untuk memastikan apakah sistem benar-benar menerapkan permintaan di sisi backend.
+Tests were performed both manually and automatically to ensure the system was actually executing requests on the backend.
 
-🎯 Tujuan Proyek
+🎯 Project Objectives
 
-Memahami cara kerja rate limiting pada API
+Understand how rate limiting works on APIs
 
-Menguji efektivitas permintaan perdagangan
+Test the effectiveness of trade requests
 
-Mengidentifikasi potensi penyalahgunaan API
+Identify potential API throttling
 
-Memberikan rekomendasi perbaikan keamanan
+Provide security improvement recommendations
 
-🛠 Metodologi Pengujian
+🛠 Testing Methodology
 
-1️⃣ Manual Pengujian (cURL)
+1️⃣ Manual Testing (cURL)
 
-Mengirimkan permintaan berulang dalam waktu singkat
+Send requests repeatedly within a short period of time
 
-Server respons mengamati
+Observe server responses
 
-Memeriksa apakah muncul HTTP 429 (Terlalu Banyak Permintaan)
+Check for HTTP 429 (Too Many Requests) errors
 
-Hasil:
-Server tetap merespons 200 OK tanpa bergerak.
+Result:
+The server continued to respond with 200 OK without any response.
 
-2️⃣ Pengujian Otomatis (Skrip Python)
+2️⃣ Automated Testing (Python Script)
 
-Membuat skrip menggunakan permintaan perpustakaan
+Creating a script using the requests library
 
-Mengirim ±50 permintaan secara cepat
+Sending approximately 50 requests quickly
 
-Mencatat kode status dari setiap respon
+Logging the status code of each response
 
-Hasil:
-Tidak ditemukan HTTP 429 atau mekanisme pembatasan backend.
+Result:
+No HTTP 429 or backend network mechanism found.
 
-📊 Temuan
+📊 Findings
 
-Sistem menampilkan batas kecepatan informasi
+The system displays rate limit information
 
-Tidak terdapat penegakan di sisi backend
+No backend enforcement
 
-Semua permintaan tetap diproses tanpa transaksi
+All requests are processed without a transaction
 
-Tidak muncul HTTP 429 (Terlalu Banyak Permintaan)
+No HTTP 429 (Too Many Requests) error appears
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue) ![Security](https://img.shields.io/badge/Security-Research-red) ![OWASP](https://img.shields.io/badge/OWASP-Aware-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
