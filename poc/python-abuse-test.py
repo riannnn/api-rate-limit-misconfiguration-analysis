@@ -1,6 +1,6 @@
 import requests
 
-URL = "https://example.com/api"
+URL = "https://akademik.uhamka.ac.id/"
 PARAMS = {"per_page": 300, "page": 1}
 
 def test_rate_limit():
